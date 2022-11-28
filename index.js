@@ -7,7 +7,7 @@ const dbConfig = require("./app/config/db.config");
 const app = express();
 
 var corsOptions = {
-  origin:[ "https://tic-tac-toe-front-9lnq.vercel.app", 'http://localhost:3000']
+  origin: "https://tic-tac-toe-front-9lnq.vercel.app",
 };
 
 app.use(cors(corsOptions));
