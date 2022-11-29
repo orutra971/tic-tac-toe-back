@@ -55,6 +55,10 @@ exports.getGame = (req, res) => {
         return;
       }
       
+      if (game && game.player_x && game.player_o) {
+        verifyGame.removeByIndex(game.player_x.toHexString(), game.player_o.toHexString());
+      }
+      
       if (game.state === -1) {
         game.state = 0;
 
