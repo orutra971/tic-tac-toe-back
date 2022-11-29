@@ -31,7 +31,7 @@ exports.getPlayers = async (req, res) => {
 
       console.log({_users});
 
-      res.status(200).json({players: _users});
+      res.status(200).send(JSON.stringify(_users));
     }
   );
 };
