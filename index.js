@@ -7,7 +7,7 @@ const dbConfig = require("./app/config/db.config");
 const app = express();
 
 var corsOptions = {
-  origin: "https://tic-tac-toe-front-9lnq.vercel.app",
+  origin: ["https://tic-tac-toe-front-9lnq.vercel.app", "https://tic-tac-toe-mx.herokuapp.com"],
 };
 
 app.use(cors(corsOptions));
