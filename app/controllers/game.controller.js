@@ -166,13 +166,13 @@ exports.finishGame = (req, res) => {
               return;
             }
       
-            res.json(game);
+            res.status(200).json(game);
           }
         );
         return;
       }
 
-      res.json(game);
+      res.status(200).json(game);
     }
   );
 };

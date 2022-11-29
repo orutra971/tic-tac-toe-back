@@ -27,8 +27,11 @@ exports.getPlayers = async (req, res) => {
         res.status(500).json({ message: err.message });
         return;
       }
+      const _users = users.map((e) => ({_id: e._id.toHexString(), username: e.username, image: e.image}));
 
-      res.status(200).json(users);
+      console.log({_users});
+
+      res.status(200).json({players: _users});
     }
   );
 };
