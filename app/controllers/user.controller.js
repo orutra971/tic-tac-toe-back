@@ -27,11 +27,11 @@ exports.getPlayers = async (req, res) => {
         res.status(500).json({ message: err.message });
         return;
       }
-      const _users = users.map((e) => ({_id: e._id.toHexString(), username: e.username, image: encodeURIComponent(e.image)}));
+      const _users = users.map((e) => ({_id: e._id.toHexString(), username: e.username, image: e.image}));
 
       console.log({_users});
 
-      res.status(200).send(JSON.stringify(_users));
+      res.status(200).send(JSON.stringify());
     }
   );
 };
